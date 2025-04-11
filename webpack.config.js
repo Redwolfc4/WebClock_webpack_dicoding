@@ -39,7 +39,6 @@ module.exports = {
       },
     ],
   },
-
   plugins: [
     // html webpack plugin
     new htmlWebpackPlugin({
@@ -47,4 +46,12 @@ module.exports = {
       filename: "index.html",
     }),
   ],
+  devServer: {
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
+  },
 };
